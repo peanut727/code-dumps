@@ -62,7 +62,6 @@ public class ImageConverter {
 
         for (int row = 0; row < image.getHeight(); row += ratioHeight) {
             for (int col = 0; col < image.getWidth(); col += ratioWidth) {
-                // Calculate average grayscale value for the block
                 double totGrayscaleVal = 0;
                 int pixInBlock = 0;
                 for (int r = row; r < row + ratioHeight && r < image.getHeight(); r++) {
