@@ -1,0 +1,16 @@
+C:\Users\ReviVM\source\repos\GradingSystem\GradingSystem\bin\Debug\net6.0-windows\GradingSystem.exe
+C:\Users\ReviVM\source\repos\GradingSystem\GradingSystem\bin\Debug\net6.0-windows\GradingSystem.deps.json
+C:\Users\ReviVM\source\repos\GradingSystem\GradingSystem\bin\Debug\net6.0-windows\GradingSystem.runtimeconfig.json
+C:\Users\ReviVM\source\repos\GradingSystem\GradingSystem\bin\Debug\net6.0-windows\GradingSystem.dll
+C:\Users\ReviVM\source\repos\GradingSystem\GradingSystem\bin\Debug\net6.0-windows\GradingSystem.pdb
+C:\Users\ReviVM\source\repos\GradingSystem\GradingSystem\obj\Debug\net6.0-windows\GradingSystem.Form1.resources
+C:\Users\ReviVM\source\repos\GradingSystem\GradingSystem\obj\Debug\net6.0-windows\GradingSystem.csproj.GenerateResource.cache
+C:\Users\ReviVM\source\repos\GradingSystem\GradingSystem\obj\Debug\net6.0-windows\GradingSystem.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ReviVM\source\repos\GradingSystem\GradingSystem\obj\Debug\net6.0-windows\GradingSystem.AssemblyInfoInputs.cache
+C:\Users\ReviVM\source\repos\GradingSystem\GradingSystem\obj\Debug\net6.0-windows\GradingSystem.AssemblyInfo.cs
+C:\Users\ReviVM\source\repos\GradingSystem\GradingSystem\obj\Debug\net6.0-windows\GradingSystem.csproj.CoreCompileInputs.cache
+C:\Users\ReviVM\source\repos\GradingSystem\GradingSystem\obj\Debug\net6.0-windows\GradingSystem.dll
+C:\Users\ReviVM\source\repos\GradingSystem\GradingSystem\obj\Debug\net6.0-windows\refint\GradingSystem.dll
+C:\Users\ReviVM\source\repos\GradingSystem\GradingSystem\obj\Debug\net6.0-windows\GradingSystem.pdb
+C:\Users\ReviVM\source\repos\GradingSystem\GradingSystem\obj\Debug\net6.0-windows\GradingSystem.genruntimeconfig.cache
+C:\Users\ReviVM\source\repos\GradingSystem\GradingSystem\obj\Debug\net6.0-windows\ref\GradingSystem.dll
