@@ -46,21 +46,26 @@ namespace POS
 
         private void button2_Click(object sender, EventArgs e)
         {
+            try
+            {
+                int search = Convert.ToInt32(searchNum.Text);
+                product.getProd(search);
 
-            int search = Convert.ToInt32(searchNum.Text);
-            product.getProd(search);
-
-            string prodname = product.getName();
-            decimal price = product.getPrice();
+                string prodname = product.getName();
+                decimal price = product.getPrice();
 
 
 
-            itemName.Text += prodname + Environment.NewLine;
-            itemPrice.Text += "₱" + price.ToString() + Environment.NewLine;
+                itemName.Text += prodname + Environment.NewLine;
+                itemPrice.Text += "₱" + price.ToString() + Environment.NewLine;
 
-            totalPrice += price;
-            totPrice.Text = "₱" + totalPrice.ToString("N2");
-
+                totalPrice += price;
+                totPrice.Text = "₱" + totalPrice.ToString("N2");
+            } catch
+            {
+                MessageBox.Show("Invalid characters!");
+            }
+           
         }
     }
 }

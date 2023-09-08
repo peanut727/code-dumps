@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\ReviVM\\source\\repos\\POS\\POS\\POS.csproj": {}
+    "C:\\Users\\ReviVM\\Desktop\\Github\\code-dumps\\C#\\POS\\POS\\POS.csproj": {}
   },
   "projects": {
-    "C:\\Users\\ReviVM\\source\\repos\\POS\\POS\\POS.csproj": {
+    "C:\\Users\\ReviVM\\Desktop\\Github\\code-dumps\\C#\\POS\\POS\\POS.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ReviVM\\source\\repos\\POS\\POS\\POS.csproj",
+        "projectUniqueName": "C:\\Users\\ReviVM\\Desktop\\Github\\code-dumps\\C#\\POS\\POS\\POS.csproj",
         "projectName": "POS",
-        "projectPath": "C:\\Users\\ReviVM\\source\\repos\\POS\\POS\\POS.csproj",
+        "projectPath": "C:\\Users\\ReviVM\\Desktop\\Github\\code-dumps\\C#\\POS\\POS\\POS.csproj",
         "packagesPath": "C:\\Users\\ReviVM\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ReviVM\\source\\repos\\POS\\POS\\obj\\",
+        "outputPath": "C:\\Users\\ReviVM\\Desktop\\Github\\code-dumps\\C#\\POS\\POS\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\ReviVM\\AppData\\Roaming\\NuGet\\NuGet.Config",
