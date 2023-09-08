@@ -1,0 +1,16 @@
+C:\Users\ReviVM\source\repos\POS\POS\bin\Debug\net6.0-windows\POS.exe
+C:\Users\ReviVM\source\repos\POS\POS\bin\Debug\net6.0-windows\POS.deps.json
+C:\Users\ReviVM\source\repos\POS\POS\bin\Debug\net6.0-windows\POS.runtimeconfig.json
+C:\Users\ReviVM\source\repos\POS\POS\bin\Debug\net6.0-windows\POS.dll
+C:\Users\ReviVM\source\repos\POS\POS\bin\Debug\net6.0-windows\POS.pdb
+C:\Users\ReviVM\source\repos\POS\POS\obj\Debug\net6.0-windows\POS.Form1.resources
+C:\Users\ReviVM\source\repos\POS\POS\obj\Debug\net6.0-windows\POS.csproj.GenerateResource.cache
+C:\Users\ReviVM\source\repos\POS\POS\obj\Debug\net6.0-windows\POS.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ReviVM\source\repos\POS\POS\obj\Debug\net6.0-windows\POS.AssemblyInfoInputs.cache
+C:\Users\ReviVM\source\repos\POS\POS\obj\Debug\net6.0-windows\POS.AssemblyInfo.cs
+C:\Users\ReviVM\source\repos\POS\POS\obj\Debug\net6.0-windows\POS.csproj.CoreCompileInputs.cache
+C:\Users\ReviVM\source\repos\POS\POS\obj\Debug\net6.0-windows\POS.dll
+C:\Users\ReviVM\source\repos\POS\POS\obj\Debug\net6.0-windows\refint\POS.dll
+C:\Users\ReviVM\source\repos\POS\POS\obj\Debug\net6.0-windows\POS.pdb
+C:\Users\ReviVM\source\repos\POS\POS\obj\Debug\net6.0-windows\POS.genruntimeconfig.cache
+C:\Users\ReviVM\source\repos\POS\POS\obj\Debug\net6.0-windows\ref\POS.dll
