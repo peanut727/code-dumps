@@ -1,0 +1,16 @@
+C:\Users\ReviVM\source\repos\Sizes\Sizes\bin\Debug\net6.0-windows\Sizes.exe
+C:\Users\ReviVM\source\repos\Sizes\Sizes\bin\Debug\net6.0-windows\Sizes.deps.json
+C:\Users\ReviVM\source\repos\Sizes\Sizes\bin\Debug\net6.0-windows\Sizes.runtimeconfig.json
+C:\Users\ReviVM\source\repos\Sizes\Sizes\bin\Debug\net6.0-windows\Sizes.dll
+C:\Users\ReviVM\source\repos\Sizes\Sizes\bin\Debug\net6.0-windows\Sizes.pdb
+C:\Users\ReviVM\source\repos\Sizes\Sizes\obj\Debug\net6.0-windows\Sizes.Form1.resources
+C:\Users\ReviVM\source\repos\Sizes\Sizes\obj\Debug\net6.0-windows\Sizes.csproj.GenerateResource.cache
+C:\Users\ReviVM\source\repos\Sizes\Sizes\obj\Debug\net6.0-windows\Sizes.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ReviVM\source\repos\Sizes\Sizes\obj\Debug\net6.0-windows\Sizes.AssemblyInfoInputs.cache
+C:\Users\ReviVM\source\repos\Sizes\Sizes\obj\Debug\net6.0-windows\Sizes.AssemblyInfo.cs
+C:\Users\ReviVM\source\repos\Sizes\Sizes\obj\Debug\net6.0-windows\Sizes.csproj.CoreCompileInputs.cache
+C:\Users\ReviVM\source\repos\Sizes\Sizes\obj\Debug\net6.0-windows\Sizes.dll
+C:\Users\ReviVM\source\repos\Sizes\Sizes\obj\Debug\net6.0-windows\refint\Sizes.dll
+C:\Users\ReviVM\source\repos\Sizes\Sizes\obj\Debug\net6.0-windows\Sizes.pdb
+C:\Users\ReviVM\source\repos\Sizes\Sizes\obj\Debug\net6.0-windows\Sizes.genruntimeconfig.cache
+C:\Users\ReviVM\source\repos\Sizes\Sizes\obj\Debug\net6.0-windows\ref\Sizes.dll
