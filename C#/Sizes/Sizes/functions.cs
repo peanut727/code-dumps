@@ -13,12 +13,6 @@ namespace Sizes
         private double num2;
         private string oper;
         private double solve;
-       
-
-
-
-
-
 
         public void setOP(double x, double y, string op)
         {
@@ -62,7 +56,11 @@ namespace Sizes
         {
             double size = solve;
 
-            if (size <= 11)
+            if (size < 0)
+            {
+                MessageBox.Show("Negative values or invalid size");
+            }
+            else if (size <= 11)
             {
                 MessageBox.Show("Small - " + solve);
             }
@@ -70,13 +68,13 @@ namespace Sizes
             {
                 MessageBox.Show("Medium - " + solve);
             }
-            else if (size <= 24)
+            else if (size <= 24) 
             {
                 MessageBox.Show("Large - " + solve);
             }
-            else if (size >= 32) 
+            else if (size >= 32)
             {
-                MessageBox.Show("Xtra-Large - " + solve);
+                MessageBox.Show("Extra Large - " + solve);
             }
         }
     }
