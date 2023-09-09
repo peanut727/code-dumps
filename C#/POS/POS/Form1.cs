@@ -61,6 +61,7 @@ namespace POS
 
                 totalPrice += price;
                 totPrice.Text = "₱" + totalPrice.ToString("N2");
+
             } catch
             {
                 MessageBox.Show("Invalid characters!");
