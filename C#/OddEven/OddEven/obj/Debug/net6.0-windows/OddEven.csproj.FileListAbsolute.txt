@@ -1,0 +1,16 @@
+C:\Users\ReviVM\source\repos\OddEven\OddEven\bin\Debug\net6.0-windows\OddEven.exe
+C:\Users\ReviVM\source\repos\OddEven\OddEven\bin\Debug\net6.0-windows\OddEven.deps.json
+C:\Users\ReviVM\source\repos\OddEven\OddEven\bin\Debug\net6.0-windows\OddEven.runtimeconfig.json
+C:\Users\ReviVM\source\repos\OddEven\OddEven\bin\Debug\net6.0-windows\OddEven.dll
+C:\Users\ReviVM\source\repos\OddEven\OddEven\bin\Debug\net6.0-windows\OddEven.pdb
+C:\Users\ReviVM\source\repos\OddEven\OddEven\obj\Debug\net6.0-windows\OddEven.Form1.resources
+C:\Users\ReviVM\source\repos\OddEven\OddEven\obj\Debug\net6.0-windows\OddEven.csproj.GenerateResource.cache
+C:\Users\ReviVM\source\repos\OddEven\OddEven\obj\Debug\net6.0-windows\OddEven.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ReviVM\source\repos\OddEven\OddEven\obj\Debug\net6.0-windows\OddEven.AssemblyInfoInputs.cache
+C:\Users\ReviVM\source\repos\OddEven\OddEven\obj\Debug\net6.0-windows\OddEven.AssemblyInfo.cs
+C:\Users\ReviVM\source\repos\OddEven\OddEven\obj\Debug\net6.0-windows\OddEven.csproj.CoreCompileInputs.cache
+C:\Users\ReviVM\source\repos\OddEven\OddEven\obj\Debug\net6.0-windows\OddEven.dll
+C:\Users\ReviVM\source\repos\OddEven\OddEven\obj\Debug\net6.0-windows\refint\OddEven.dll
+C:\Users\ReviVM\source\repos\OddEven\OddEven\obj\Debug\net6.0-windows\OddEven.pdb
+C:\Users\ReviVM\source\repos\OddEven\OddEven\obj\Debug\net6.0-windows\OddEven.genruntimeconfig.cache
+C:\Users\ReviVM\source\repos\OddEven\OddEven\obj\Debug\net6.0-windows\ref\OddEven.dll
