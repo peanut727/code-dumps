@@ -1,0 +1,16 @@
+C:\Users\ReviVM\source\repos\StackTest\StackTest\bin\Debug\net6.0-windows\StackTest.exe
+C:\Users\ReviVM\source\repos\StackTest\StackTest\bin\Debug\net6.0-windows\StackTest.deps.json
+C:\Users\ReviVM\source\repos\StackTest\StackTest\bin\Debug\net6.0-windows\StackTest.runtimeconfig.json
+C:\Users\ReviVM\source\repos\StackTest\StackTest\bin\Debug\net6.0-windows\StackTest.dll
+C:\Users\ReviVM\source\repos\StackTest\StackTest\bin\Debug\net6.0-windows\StackTest.pdb
+C:\Users\ReviVM\source\repos\StackTest\StackTest\obj\Debug\net6.0-windows\StackTest.Form1.resources
+C:\Users\ReviVM\source\repos\StackTest\StackTest\obj\Debug\net6.0-windows\StackTest.csproj.GenerateResource.cache
+C:\Users\ReviVM\source\repos\StackTest\StackTest\obj\Debug\net6.0-windows\StackTest.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ReviVM\source\repos\StackTest\StackTest\obj\Debug\net6.0-windows\StackTest.AssemblyInfoInputs.cache
+C:\Users\ReviVM\source\repos\StackTest\StackTest\obj\Debug\net6.0-windows\StackTest.AssemblyInfo.cs
+C:\Users\ReviVM\source\repos\StackTest\StackTest\obj\Debug\net6.0-windows\StackTest.csproj.CoreCompileInputs.cache
+C:\Users\ReviVM\source\repos\StackTest\StackTest\obj\Debug\net6.0-windows\StackTest.dll
+C:\Users\ReviVM\source\repos\StackTest\StackTest\obj\Debug\net6.0-windows\refint\StackTest.dll
+C:\Users\ReviVM\source\repos\StackTest\StackTest\obj\Debug\net6.0-windows\StackTest.pdb
+C:\Users\ReviVM\source\repos\StackTest\StackTest\obj\Debug\net6.0-windows\StackTest.genruntimeconfig.cache
+C:\Users\ReviVM\source\repos\StackTest\StackTest\obj\Debug\net6.0-windows\ref\StackTest.dll
