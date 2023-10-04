@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">GymTracker</string>
+
+    <string-array name="break_array">
+            <item>Muscle hypertrophy</item>
+            <item>Muscle endurance</item>
+            <item>Muscle power</item>
+            <item>Muscle strength</item>
+        </string-array>
+
+
+</resources>
