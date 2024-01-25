@@ -1,8 +1,22 @@
 {
   "version": 2,
-  "dgSpecHash": "tMPPWRteTyTY2N/LzE08d4Doyl1oxfWK4ZFwwHUUrRWUGzoE1n4NS5Eg6fpBmxoo0pCUK3pfwHSr7QOiUCcstQ==",
+  "dgSpecHash": "khw0sKhoixYtu8GUGNuWqqDFYVbH0DRYTiSjsMKERjVX39sZ8UiC/T6Ibk2+HyPPQFk6xtQp/kWdENxV89YhPQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\peanut\\Desktop\\Github\\code-dumps\\C#\\autoclicker\\autoclicker\\autoclicker.csproj",
-  "expectedPackageFiles": [],
-  "logs": []
+  "expectedPackageFiles": [
+    "C:\\Users\\peanut\\.nuget\\packages\\mousekeyhook\\5.7.1\\mousekeyhook.5.7.1.nupkg.sha512",
+    "C:\\Users\\peanut\\.nuget\\packages\\siticone.desktop.ui\\2.1.1\\siticone.desktop.ui.2.1.1.nupkg.sha512"
+  ],
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'Siticone.Desktop.UI 2.1.1' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net8.0-windows7.0'. This package may not be fully compatible with your project.",
+      "libraryId": "Siticone.Desktop.UI",
+      "targetGraphs": [
+        "net8.0-windows7.0"
+      ]
+    }
+  ]
 }

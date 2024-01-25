@@ -28,23 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            button1 = new Button();
             textBox1 = new TextBox();
-            button2 = new Button();
             backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
-            label1 = new Label();
             button3 = new Button();
+            checkBox1 = new CheckBox();
             SuspendLayout();
-            // 
-            // button1
-            // 
-            button1.Location = new Point(51, 102);
-            button1.Name = "button1";
-            button1.Size = new Size(100, 41);
-            button1.TabIndex = 0;
-            button1.Text = "On";
-            button1.UseVisualStyleBackColor = true;
-            button1.Click += button1_Click;
             // 
             // textBox1
             // 
@@ -53,29 +41,9 @@
             textBox1.Size = new Size(206, 23);
             textBox1.TabIndex = 1;
             // 
-            // button2
-            // 
-            button2.Location = new Point(157, 102);
-            button2.Name = "button2";
-            button2.Size = new Size(100, 41);
-            button2.TabIndex = 2;
-            button2.Text = "Off";
-            button2.UseVisualStyleBackColor = true;
-            button2.Click += button2_Click;
-            // 
             // backgroundWorker1
             // 
             backgroundWorker1.DoWork += backgroundWorker1_DoWork;
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Microsoft Sans Serif", 16F);
-            label1.Location = new Point(103, 44);
-            label1.Name = "label1";
-            label1.Size = new Size(97, 26);
-            label1.TabIndex = 3;
-            label1.Text = "Disabled";
             // 
             // button3
             // 
@@ -85,18 +53,25 @@
             button3.TabIndex = 4;
             button3.Text = "Apply";
             button3.UseVisualStyleBackColor = true;
-            button3.Click += button3_Click;
+            // 
+            // checkBox1
+            // 
+            checkBox1.AutoSize = true;
+            checkBox1.Location = new Point(51, 102);
+            checkBox1.Name = "checkBox1";
+            checkBox1.Size = new Size(68, 19);
+            checkBox1.TabIndex = 5;
+            checkBox1.Text = "Enabled";
+            checkBox1.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(364, 227);
+            Controls.Add(checkBox1);
             Controls.Add(button3);
-            Controls.Add(label1);
-            Controls.Add(button2);
             Controls.Add(textBox1);
-            Controls.Add(button1);
             Name = "Form1";
             Text = "Form1";
             Load += Form1_Load;
@@ -105,12 +80,9 @@
         }
 
         #endregion
-
-        private Button button1;
         private TextBox textBox1;
-        private Button button2;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
-        private Label label1;
         private Button button3;
+        private CheckBox checkBox1;
     }
 }

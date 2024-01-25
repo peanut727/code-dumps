@@ -1,4 +1,9 @@
+using Gma.System.MouseKeyHook;
+using System.Diagnostics;
+using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
+using System.Xml.Serialization;
+
 
 namespace autoclicker
 {
@@ -12,48 +17,56 @@ namespace autoclicker
 
         private const int LEFTUP = 0x0004;
         private const int LEFTDOWN = 0x0002;
-        public int intervals = 5;
+        public int intervals = 1000 / 10;
         public bool Click = false;
-
+        private IKeyboardMouseEvents events;
 
         public Form1()
         {
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            label1.Text = "Enabled";
-        }
-
-        /*private void Autoclicker_Tick(object sender, EventArgs e)
-        {
-            if (!Bounds.Contains(PointToClient(MousePosition)))
-            {
-                mouse_event(0x02, 0, 0, 0, 0);
-                System.Threading.Thread.Sleep(10);
-                mouse_event(0x04, 0, 0, 0, 0);
-            }
-        }*/
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            label1.Text = "disabled";
-        }
-
         private void Form1_Load(object sender, EventArgs e)
         {
             CheckForIllegalCrossThreadCalls = false;
-            Thread AC = new Thread(AutoClick);
-            AC.Start();
-            backgroundWorker1.RunWorkerAsync();
+            Thread thread = new Thread(AutoClick);
+            thread.Start();
+            //backgroundWorker1.RunWorkerAsync();
+            Subscribe();
+
         }
 
+        public void Subscribe()
+        {
+            events = Hook.GlobalEvents();
+
+            events.MouseDownExt += GlobalHookMouseDown;
+            events.MouseUpExt += GlobalHookMouseUp;
+            events.MouseClick += GHookClickEnable;
+        }
+        private void GHookClickEnable (object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Middle)
+            {
+                if (isEnabled)
+                {
+
+                    Debug.WriteLine("Off");
+                    isEnabled = false;
+
+                }
+                else
+                {
+                    Debug.WriteLine("On");
+                    isEnabled = true;
+                }
+            } 
+        }
         private void AutoClick()
         {
             while (true)
             {
-                if (Click = true)
+                if (Click)
                 {
                     mouse_event(dwFlags: LEFTUP, dx: 0, dy: 0, cButtons: 0, dwExtraInfo: 0);
                     Thread.Sleep(1);
@@ -62,30 +75,46 @@ namespace autoclicker
                 }
                 Thread.Sleep(1);
             }
-        }
 
+        }
+        private bool isEnabled = false;
         private void backgroundWorker1_DoWork(object sender, System.ComponentModel.DoWorkEventArgs e)
         {
             while (true)
             {
-                if (label1.Text == "Enabled")
+                if (isEnabled)
                 {
-                    if (GetAsyncKeyState(Keys.Down) < 0)
-                    {
-                        Click = false;
-                    }
-                    else if (GetAsyncKeyState(Keys.Up) < 0)
-                    {
-                        Click = true;
-                    }
-                    Thread.Sleep(1);
+                    Thread thread = new Thread(AutoClick);
+                    thread.Start();
                 }
             }
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void GlobalHookMouseUp (object sender, MouseEventExtArgs e)
         {
-            
+            if (e.Button == MouseButtons.Left && isEnabled)
+            {
+                Debug.WriteLine("LReleased");
+                Click = false;
+            }
+            else if (e.Button == MouseButtons.Right)
+            {
+               // MessageBox.Show("RReleased");
+            }
         }
+
+        private void GlobalHookMouseDown (object sender, MouseEventExtArgs e)
+        {
+            if (e.Button == MouseButtons.Left && isEnabled)
+            {
+                Debug.WriteLine("Left");
+                Click = true;
+            }
+            else if (e.Button == MouseButtons.Right)
+            {
+                // MessageBox.Show("Right");
+            }
+        }
+
     }
 }
