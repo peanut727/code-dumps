@@ -4,54 +4,29 @@ namespace autoclicker
 {
     public partial class Form1 : Form
     {
+        [DllImport("user32.dll", CharSet = CharSet.Auto, CallingConvention = CallingConvention.StdCall)]
+        public static extern void mouse_event(int dwFlags, int dx, int dy, int cButtons, int dwExtraInfo);
+
         [DllImport("user32.dll")]
-        private static extern void mouse_event(int dwFlags, int dx, int dy, int dwData, int dwExtraInfo);
-        private bool on;
+        static extern short GetAsyncKeyState(Keys vKey);
+
+        private const int LEFTUP = 0x0004;
+        private const int LEFTDOWN = 0x0002;
+        public int intervals = 5;
+        public bool Click = false;
+
 
         public Form1()
         {
             InitializeComponent();
         }
 
-        private void OnMouseDown(object sender, MouseEventArgs e)
-        {
-            if (e.Button == MouseButtons.Left)
-            {
-                Autoclicker.Start();
-            }
-        }
-        private void OnMouseUp(object sender, MouseEventArgs e)
-        {
-            if (e.Button == MouseButtons.Right)
-            {
-                Autoclicker.Stop();
-            }
-        }
-
-        private void start()
-        {
-            Autoclicker.Interval = (int)1000.0 / Convert.ToInt32(textBox1.Text);
-            Autoclicker.Start();
-            button1.Enabled = false;
-            button2.Enabled = true;
-            
-          
-           
-
-        }
-        private void stop()
-        {
-            Autoclicker.Stop();
-            button1.Enabled = true;
-            button2.Enabled = false;
-        }
-
         private void button1_Click(object sender, EventArgs e)
-        { 
-            start();
+        {
+            label1.Text = "Enabled";
         }
 
-        private void Autoclicker_Tick(object sender, EventArgs e)
+        /*private void Autoclicker_Tick(object sender, EventArgs e)
         {
             if (!Bounds.Contains(PointToClient(MousePosition)))
             {
@@ -59,12 +34,58 @@ namespace autoclicker
                 System.Threading.Thread.Sleep(10);
                 mouse_event(0x04, 0, 0, 0, 0);
             }
-        }
+        }*/
 
         private void button2_Click(object sender, EventArgs e)
         {
-            stop();
-            on = false;
+            label1.Text = "disabled";
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            CheckForIllegalCrossThreadCalls = false;
+            Thread AC = new Thread(AutoClick);
+            AC.Start();
+            backgroundWorker1.RunWorkerAsync();
+        }
+
+        private void AutoClick()
+        {
+            while (true)
+            {
+                if (Click = true)
+                {
+                    mouse_event(dwFlags: LEFTUP, dx: 0, dy: 0, cButtons: 0, dwExtraInfo: 0);
+                    Thread.Sleep(1);
+                    mouse_event(dwFlags: LEFTDOWN, dx: 0, dy: 0, cButtons: 0, dwExtraInfo: 0);
+                    Thread.Sleep(intervals);
+                }
+                Thread.Sleep(1);
+            }
+        }
+
+        private void backgroundWorker1_DoWork(object sender, System.ComponentModel.DoWorkEventArgs e)
+        {
+            while (true)
+            {
+                if (label1.Text == "Enabled")
+                {
+                    if (GetAsyncKeyState(Keys.Down) < 0)
+                    {
+                        Click = false;
+                    }
+                    else if (GetAsyncKeyState(Keys.Up) < 0)
+                    {
+                        Click = true;
+                    }
+                    Thread.Sleep(1);
+                }
+            }
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }

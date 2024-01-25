@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\peanut\\source\\repos\\autoclicker\\autoclicker\\autoclicker.csproj": {}
+    "C:\\Users\\peanut\\Desktop\\Github\\code-dumps\\C#\\autoclicker\\autoclicker\\autoclicker.csproj": {}
   },
   "projects": {
-    "C:\\Users\\peanut\\source\\repos\\autoclicker\\autoclicker\\autoclicker.csproj": {
+    "C:\\Users\\peanut\\Desktop\\Github\\code-dumps\\C#\\autoclicker\\autoclicker\\autoclicker.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\peanut\\source\\repos\\autoclicker\\autoclicker\\autoclicker.csproj",
+        "projectUniqueName": "C:\\Users\\peanut\\Desktop\\Github\\code-dumps\\C#\\autoclicker\\autoclicker\\autoclicker.csproj",
         "projectName": "autoclicker",
-        "projectPath": "C:\\Users\\peanut\\source\\repos\\autoclicker\\autoclicker\\autoclicker.csproj",
+        "projectPath": "C:\\Users\\peanut\\Desktop\\Github\\code-dumps\\C#\\autoclicker\\autoclicker\\autoclicker.csproj",
         "packagesPath": "C:\\Users\\peanut\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\peanut\\source\\repos\\autoclicker\\autoclicker\\obj\\",
+        "outputPath": "C:\\Users\\peanut\\Desktop\\Github\\code-dumps\\C#\\autoclicker\\autoclicker\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\peanut\\AppData\\Roaming\\NuGet\\NuGet.Config",

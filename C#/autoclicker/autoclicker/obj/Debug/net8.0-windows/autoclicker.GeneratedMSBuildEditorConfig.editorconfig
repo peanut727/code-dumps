@@ -14,6 +14,6 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = autoclicker
-build_property.ProjectDir = C:\Users\peanut\source\repos\autoclicker\autoclicker\
+build_property.ProjectDir = C:\Users\peanut\Desktop\Github\code-dumps\C#\autoclicker\autoclicker\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
