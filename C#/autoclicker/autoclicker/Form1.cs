@@ -1,7 +1,9 @@
 using Gma.System.MouseKeyHook;
+using System;
 using System.Diagnostics;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
+using System.Windows.Forms;
 using System.Xml.Serialization;
 
 
@@ -17,7 +19,7 @@ namespace autoclicker
 
         private const int LEFTUP = 0x0004;
         private const int LEFTDOWN = 0x0002;
-        public int intervals = 1000 / 10;
+        public int intervals = 1000 / 20;
         public bool Click = false;
         private IKeyboardMouseEvents events;
 
@@ -26,13 +28,14 @@ namespace autoclicker
             InitializeComponent();
         }
 
-        private void Form1_Load(object sender, EventArgs e)
+        private async void Form1_Load(object sender, EventArgs e)
         {
             CheckForIllegalCrossThreadCalls = false;
-            Thread thread = new Thread(AutoClick);
-            thread.Start();
+            //Thread thread = new Thread(AutoClick);
+            //thread.Start();
             //backgroundWorker1.RunWorkerAsync();
             Subscribe();
+            await AutoClick();
 
         }
 
@@ -44,7 +47,7 @@ namespace autoclicker
             events.MouseUpExt += GlobalHookMouseUp;
             events.MouseClick += GHookClickEnable;
         }
-        private void GHookClickEnable (object sender, MouseEventArgs e)
+        private void GHookClickEnable(object sender, MouseEventArgs e)
         {
             if (e.Button == MouseButtons.Middle)
             {
@@ -60,20 +63,20 @@ namespace autoclicker
                     Debug.WriteLine("On");
                     isEnabled = true;
                 }
-            } 
+            }
         }
-        private void AutoClick()
+        private async Task AutoClick()
         {
             while (true)
             {
                 if (Click)
                 {
                     mouse_event(dwFlags: LEFTUP, dx: 0, dy: 0, cButtons: 0, dwExtraInfo: 0);
-                    Thread.Sleep(1);
+                    await Task.Delay(1);
                     mouse_event(dwFlags: LEFTDOWN, dx: 0, dy: 0, cButtons: 0, dwExtraInfo: 0);
-                    Thread.Sleep(intervals);
+                    await Task.Delay(intervals);
                 }
-                Thread.Sleep(1);
+                await Task.Delay(1);
             }
 
         }
@@ -84,13 +87,13 @@ namespace autoclicker
             {
                 if (isEnabled)
                 {
-                    Thread thread = new Thread(AutoClick);
-                    thread.Start();
+                    //Thread thread = new Thread(AutoClick);
+                    //thread.Start();
                 }
             }
         }
 
-        private void GlobalHookMouseUp (object sender, MouseEventExtArgs e)
+        private void GlobalHookMouseUp(object sender, MouseEventExtArgs e)
         {
             if (e.Button == MouseButtons.Left && isEnabled)
             {
@@ -99,11 +102,11 @@ namespace autoclicker
             }
             else if (e.Button == MouseButtons.Right)
             {
-               // MessageBox.Show("RReleased");
+                // MessageBox.Show("RReleased");
             }
         }
 
-        private void GlobalHookMouseDown (object sender, MouseEventExtArgs e)
+        private void GlobalHookMouseDown(object sender, MouseEventExtArgs e)
         {
             if (e.Button == MouseButtons.Left && isEnabled)
             {
@@ -116,5 +119,14 @@ namespace autoclicker
             }
         }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            var random = new Random();
+            int min = Convert.ToInt32(minCps.Text); 
+            int max = Convert.ToInt32(maxCps.Text);
+            var delay = random.NextInt64((1000 / min) - (1000 / max) + 1) + (1000 / max);
+            intervals = Convert.ToInt32(delay);
+            MessageBox.Show("CPS: " + intervals);
+        }
     }
 }
