@@ -22,6 +22,17 @@ public class MainActivity extends AppCompatActivity {
     public String key_ram = "ram";
     public String key_gpu = "gpu";
 
+    public static final String SHARED_PREFS_NAME2 = "myPref2";
+    public String key_id2  = "id2";
+    public String key_cpu2= "cpu2";
+    public String key_ram2 = "ram2";
+    public String key_gpu2 = "gpu2";
+    public static final String SHARED_PREFS_NAME3 = "myPref3";
+    public String key_id3  = "id3";
+    public String key_cpu3 = "cpu3";
+    public String key_ram3 = "ram3";
+    public String key_gpu3 = "gpu3";
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,7 +50,8 @@ public class MainActivity extends AppCompatActivity {
         btnReg.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-               saveData();
+
+                saveData2();
             }
         });
 
@@ -68,5 +80,53 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
+    public void saveData2() {
+        sharedPrefs = getSharedPreferences(SHARED_PREFS_NAME, MODE_PRIVATE);
+        SharedPreferences.Editor editor = sharedPrefs.edit();
+        try {
+            String id = sharedPrefs.getString(key_id, "");
+            String id2 = sharedPrefs.getString(key_id2, "");
+            String id3 = sharedPrefs.getString(key_id3, "");
+
+            if (id.isEmpty()) {
+                editor.putString(key_id, pc_id.getText().toString());
+                editor.putString(key_cpu, pc_cpu.getText().toString());
+                editor.putString(key_ram, pc_ram.getText().toString());
+                editor.putString(key_gpu, pc_gpu.getText().toString());
+                editor.apply();
+
+                Toast.makeText(this, "Data saved 1", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(MainActivity.this, MainActity_Home.class);
+                startActivity(intent);
+
+            } else if (!id.isEmpty() && id2.isEmpty()) {
+                editor.putString(key_id2, pc_id.getText().toString());
+                editor.putString(key_cpu2, pc_cpu.getText().toString());
+                editor.putString(key_ram2, pc_ram.getText().toString());
+                editor.putString(key_gpu2, pc_gpu.getText().toString());
+                editor.apply();
+
+                Toast.makeText(this, "Data saved 2", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(MainActivity.this, MainActity_Home.class);
+                startActivity(intent);
+
+            } else if (!id2.isEmpty()) {
+                editor.putString(key_id3, pc_id.getText().toString());
+                editor.putString(key_cpu3, pc_cpu.getText().toString());
+                editor.putString(key_ram3, pc_ram.getText().toString());
+                editor.putString(key_gpu3, pc_gpu.getText().toString());
+                editor.apply();
+
+                Toast.makeText(this, "Data saved 3", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(MainActivity.this, MainActity_Home.class);
+                startActivity(intent);
+
+            } else {
+                Toast.makeText(this, "Error!", Toast.LENGTH_SHORT).show();
+            }
+        } catch (Exception e) {
+            Toast.makeText(this, e.toString(), Toast.LENGTH_SHORT).show();
+        }
+    }
 
 }
