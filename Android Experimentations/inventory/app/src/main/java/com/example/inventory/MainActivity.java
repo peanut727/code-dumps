@@ -21,13 +21,11 @@ public class MainActivity extends AppCompatActivity {
     public String key_cpu = "cpu";
     public String key_ram = "ram";
     public String key_gpu = "gpu";
-
-    public static final String SHARED_PREFS_NAME2 = "myPref2";
     public String key_id2  = "id2";
     public String key_cpu2= "cpu2";
     public String key_ram2 = "ram2";
     public String key_gpu2 = "gpu2";
-    public static final String SHARED_PREFS_NAME3 = "myPref3";
+
     public String key_id3  = "id3";
     public String key_cpu3 = "cpu3";
     public String key_ram3 = "ram3";

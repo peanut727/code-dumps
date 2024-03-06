@@ -11,9 +11,10 @@
         android:id="@+id/showBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="44dp"
+        android:layout_marginTop="24dp"
         android:text="Show"
         app:layout_constraintEnd_toEndOf="@+id/searchText"
+        app:layout_constraintHorizontal_bias="0.483"
         app:layout_constraintStart_toStartOf="@+id/searchText"
         app:layout_constraintTop_toBottomOf="@+id/searchText" />
 
@@ -120,5 +121,15 @@
         app:layout_constraintHorizontal_bias="0.46"
         app:layout_constraintStart_toStartOf="@+id/tvGpu"
         app:layout_constraintTop_toBottomOf="@+id/tvGpu" />
+
+    <Button
+        android:id="@+id/bkButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Back"
+        app:layout_constraintEnd_toEndOf="@+id/showBtn"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/showBtn"
+        app:layout_constraintTop_toBottomOf="@+id/showBtn" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
