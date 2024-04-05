@@ -1,0 +1,153 @@
+
+
+body {
+    background-color: #FFF2E1;
+}
+
+.header {
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    padding: 10px 20px;
+    background-color: #FFF2E1;
+    color: #332617;
+    border-bottom: 0.5px solid #A79277;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    margin-left: -8px;
+    margin-right: -8px;
+    
+}
+
+.header .logo-image {
+    display: flex;
+    justify-content: center;
+}
+.header .logo-image img {
+    display: inline-block;
+    margin-left: 120px;
+    width: 150px; 
+    height: auto; 
+}
+.header .user-icons {
+    display: flex;
+    align-items: center;
+}
+
+.header .user-icons i {
+    margin-right: 10px;
+    font-size: 18px;
+}
+
+.header .menu-icon {
+    margin-left: 15px;
+}
+
+.shoppe {
+    padding: 8px 10px;
+    margin: 10px;
+    background-color: green;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+.navigation {
+    border: 1px solid #ccc;
+    border-width: 1px 0;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: large;
+}
+
+.navigation ul { 
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    margin: -8px;
+    padding: 0;
+    overflow: hidden;
+    background-color: #A79277;
+}
+
+.navigation li {
+    display: inline;
+
+}
+.navigation li a {
+   display: inline-block;
+   color: white;
+   text-align: center;
+   align-items: center;
+   padding: 14px 16px;
+   text-decoration: none;
+}
+
+.navigation li a:hover {
+    background-color:#332617;
+}
+/* Common grid styles */
+.image-grid, .image-grid-alt {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1rem;
+    padding: 1rem;
+    justify-content: center; /* Use 'center' for proper centering */
+    background-color: #D1BB9E;
+}
+
+/* Common grid-item styles */
+.image-grid .grid-item, .image-grid-alt .grid-item-alt {
+    display: flex;
+    flex-direction: column; 
+    align-items: center;  
+}
+
+/* Image styles */
+.image-grid .grid-item img, .image-grid-alt .grid-item-alt img {
+    width: 100%; /* Using 'width' instead of 'max-width' for consistency */
+    height: auto;
+    transition: transform 0.3s ease;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Slightly visible shadow for depth */
+}
+
+/* Hover effect for images */
+.image-grid .grid-item img:hover, .image-grid-alt .grid-item-alt img:hover {
+    transform: scale(1.05);
+}
+
+/* Text styles beneath images */
+.image-grid .grid-item .image-desc, .image-grid-alt .grid-item-alt .image-desc-alt {
+    font-size: 16px; /* Reduced for better readability */
+    color: #332617;
+    text-align: justify; 
+    max-width: 80%; 
+    margin: 0 auto 1em; /* Centered and with space at the bottom */
+}
+
+/* Heading styles */
+.image-grid .grid-item h2, .image-grid-alt .grid-item-alt h2 {
+    font-size: 1.75em; /* Scaled down from px to em for responsive sizing */
+    color: #332617;
+    margin: 0.5em 0;
+}
+
+@media (min-width:768px) {
+    /* Grid layout for larger screens */
+    .image-grid, .image-grid-alt {
+        grid-template-columns: 1fr 1fr; /* Two columns on larger screens */
+    }
+}
+
+@media (max-width: 768px) {
+    /* Navigation stack for smaller screens */
+    .navigation ul {
+        flex-direction: column;
+    }
+}
