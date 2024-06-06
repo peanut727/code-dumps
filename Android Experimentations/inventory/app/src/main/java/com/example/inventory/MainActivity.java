@@ -82,7 +82,7 @@ public class MainActivity extends AppCompatActivity {
         sharedPrefs = getSharedPreferences(SHARED_PREFS_NAME, MODE_PRIVATE);
         SharedPreferences.Editor editor = sharedPrefs.edit();
         try {
-            String id = sharedPrefs.getString(key_id, "");
+            String id =  sharedPrefs.getString(key_id, "");
             String id2 = sharedPrefs.getString(key_id2, "");
             String id3 = sharedPrefs.getString(key_id3, "");
 
@@ -93,7 +93,7 @@ public class MainActivity extends AppCompatActivity {
                 editor.putString(key_gpu, pc_gpu.getText().toString());
                 editor.apply();
 
-                Toast.makeText(this, "Data saved 1", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, pc_id.getText() + " saved!", Toast.LENGTH_SHORT).show();
                 Intent intent = new Intent(MainActivity.this, MainActity_Home.class);
                 startActivity(intent);
 
@@ -104,7 +104,7 @@ public class MainActivity extends AppCompatActivity {
                 editor.putString(key_gpu2, pc_gpu.getText().toString());
                 editor.apply();
 
-                Toast.makeText(this, "Data saved 2", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, pc_id.getText() + " saved!", Toast.LENGTH_SHORT).show();
                 Intent intent = new Intent(MainActivity.this, MainActity_Home.class);
                 startActivity(intent);
 
@@ -115,7 +115,7 @@ public class MainActivity extends AppCompatActivity {
                 editor.putString(key_gpu3, pc_gpu.getText().toString());
                 editor.apply();
 
-                Toast.makeText(this, "Data saved 3", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, pc_id.getText() + " saved!", Toast.LENGTH_SHORT).show();
                 Intent intent = new Intent(MainActivity.this, MainActity_Home.class);
                 startActivity(intent);
 

@@ -72,8 +72,8 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="176dp"
         android:text="ID"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.185"
+        app:layout_constraintEnd_toStartOf="@+id/tvID"
+        app:layout_constraintHorizontal_bias="0.507"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -81,7 +81,7 @@
         android:id="@+id/t3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="84dp"
+        android:layout_marginTop="72dp"
         android:text="RAM"
         app:layout_constraintEnd_toEndOf="@+id/t2"
         app:layout_constraintHorizontal_bias="0.0"
@@ -95,7 +95,7 @@
         android:layout_marginTop="84dp"
         android:text="GPU"
         app:layout_constraintEnd_toEndOf="@+id/t3"
-        app:layout_constraintHorizontal_bias="0.333"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/t3"
         app:layout_constraintTop_toBottomOf="@+id/t3" />
 
@@ -103,7 +103,7 @@
         android:id="@+id/t2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="52dp"
         android:text="CPU"
         app:layout_constraintEnd_toEndOf="@+id/t1"
         app:layout_constraintHorizontal_bias="0.0"
