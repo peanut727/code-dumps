@@ -19,14 +19,17 @@
     }
 
    .header div.logo-image {
-        border: 0px solid black;
+        flex-grow: 1;
+        display: flex;
         justify-content: center;
+        border: 0px solid black;
+        align-items: center;
         
    }
     .header .logo-image img {
-        display: flex;
-        width: 150px; 
-        height: 95px;
+        max-width: 100%; 
+        height: auto;
+        max-height: 80px;
 
     }
     .header .user-icons {
@@ -35,7 +38,6 @@
     }
 
     .header .user-icons i {
-        margin-right: 10px;
         padding: 5px;
         font-size: 18px;
     }
@@ -200,27 +202,25 @@
         }
     }
 
-
     .footer {
         background-color: #867359;
         color: white;
         padding: 20px 0;
-        text-align: center; /* Center text */
+        text-align: center;
     }
-    
     .footer-container {
         max-width: 1200px;
-        margin: 0 auto; /* Center container */
+        margin: 0 auto; 
         display: flex;
-        flex-wrap: wrap; /* Wrap sections if necessary */
-        justify-content: center; /* Center sections horizontally */
+        flex-wrap: wrap; 
+        justify-content: center; 
     }
     
     .footer-section {
         flex: 1;
         margin-right: 20px;
-        margin-bottom: 20px; /* Add some space between sections */
-        max-width: 300px; /* Limit section width */
+        margin-bottom: 20px; 
+        max-width: 300px; 
     }
     
     .footer-section h3 {
@@ -245,6 +245,8 @@
         text-align: center;
         margin-top: 20px;
     }
+
+    
     
     
     
