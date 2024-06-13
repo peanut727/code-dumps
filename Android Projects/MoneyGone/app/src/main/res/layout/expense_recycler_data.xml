@@ -43,6 +43,7 @@
                 android:layout_height="wrap_content"
                 android:maxLines="1"
                 android:text="Type"
+                android:textColor="@color/matte_black"
                 android:textAppearance="?android:textAppearanceSmall"
                 android:textStyle="bold"/>
 
@@ -52,6 +53,7 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@id/type_txt_expense"
                 android:text="Descrption"
+                android:textColor="@color/matte_black"
                 android:textAppearance="?android:textAppearanceSmall"/>
 
 

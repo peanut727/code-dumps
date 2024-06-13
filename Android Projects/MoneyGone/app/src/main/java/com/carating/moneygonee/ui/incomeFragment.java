@@ -1,5 +1,6 @@
 package com.carating.moneygonee.ui;
 
+import android.app.AlertDialog;
 import android.os.Bundle;
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
@@ -8,6 +9,8 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
 import com.carating.moneygonee.R;
 import com.carating.moneygonee.model.Data;
@@ -21,6 +24,9 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
+import java.text.DateFormat;
+import java.util.Date;
+
 public class incomeFragment extends Fragment {
 
     //Firebase database
@@ -29,7 +35,19 @@ public class incomeFragment extends Fragment {
     // Recycler View
     private RecyclerView recyclerView;
     private TextView totalIncometxt;
+
+    // Update edit text
+    private EditText edtAmount, edtType, edtNote;
+    private Button btnUpdate, btnDelete;
+
+    //Recycler View
     private FirebaseRecyclerAdapter<Data, MyViewHolder> adapter;
+
+    // Data item values
+    private String type;
+    private String note;
+    private int amount;
+    private String post_key;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -95,6 +113,20 @@ public class incomeFragment extends Fragment {
                 holder.setDesc(model.getDesc());
                 holder.setDate(model.getDate());
                 holder.setAmount(model.getAmount());
+
+                holder.mView.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+
+                        post_key = getRef(position).getKey();
+
+                        type = model.getType();
+                        note = model.getDesc();
+                        amount = model.getAmount();
+
+                        updateDataItem();
+                    }
+                });
             }
 
             @NonNull
@@ -149,7 +181,64 @@ public class incomeFragment extends Fragment {
         private void setAmount(int amount) {
             TextView mAmount = mView.findViewById(R.id.amount_txt_income);
             String stAmount = String.valueOf(amount);
-            mAmount.setText(stAmount);
+            mAmount.setText("₱ " + stAmount);
         }
+    }
+
+    private void updateDataItem() {
+
+        AlertDialog.Builder mydialog = new AlertDialog.Builder(getActivity());
+        LayoutInflater inflater = LayoutInflater.from(getActivity());
+        View myView = inflater.inflate(R.layout.update_data_item,null);
+        mydialog.setView(myView);
+
+        edtAmount = myView.findViewById(R.id.amount_edt);
+        edtType   = myView.findViewById(R.id.type_edt);
+        edtNote   = myView.findViewById(R.id.desc_edt);
+
+        // Sets the values on the dialog boxes
+        edtType.setText(type);
+        edtType.setSelection(type.length());
+
+        edtNote.setText(note);
+        edtNote.setSelection(note.length());
+
+        edtAmount.setText(String.valueOf(amount));
+        edtAmount.setSelection(String.valueOf(amount).length());
+
+        btnDelete = myView.findViewById(R.id.delete_btn);
+        btnUpdate = myView.findViewById(R.id.update_btn);
+
+        AlertDialog dialog = mydialog.create();
+
+        btnUpdate.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                type = edtType.getText().toString().trim();
+                note = edtNote.getText().toString().trim();
+
+                String mdamount = String.valueOf(amount);
+                mdamount = edtAmount.getText().toString().trim();
+                int myAmount = Integer.parseInt(mdamount);
+
+                String mDate = DateFormat.getDateInstance().format(new Date());
+
+                Data data = new Data(myAmount,type,note,post_key,mDate);
+
+                mIncomeDatabase.child(post_key).setValue(data);
+                dialog.dismiss();
+
+            }
+        });
+
+        btnDelete.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                dialog.dismiss();
+            }
+        });
+
+        dialog.show();
     }
 }

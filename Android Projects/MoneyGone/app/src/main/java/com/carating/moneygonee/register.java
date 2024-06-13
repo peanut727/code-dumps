@@ -51,7 +51,6 @@ public class register extends AppCompatActivity {
 
         mAuth = FirebaseAuth.getInstance();
         reg = findViewById(R.id.registerBtn);
-        username = findViewById(R.id.userTB);
         email = findViewById(R.id.emailTB);
         password = findViewById(R.id.passTB);
         loginView = findViewById(R.id.loginActview);
@@ -70,15 +69,10 @@ public class register extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                String user, mail, pass;
-                user = String.valueOf(username.getText());
+                String mail, pass;
                 mail = String.valueOf(email.getText());
                 pass = String.valueOf(password.getText());
 
-                if (TextUtils.isEmpty(user)) {
-                    Toast.makeText(register.this, "Username can't be empty", Toast.LENGTH_SHORT).show();
-                    return;
-                }
                 if (TextUtils.isEmpty(mail)) {
                     Toast.makeText(register.this, "Email can't be empty", Toast.LENGTH_SHORT).show();
                     return;
@@ -94,6 +88,9 @@ public class register extends AppCompatActivity {
                                 if (task.isSuccessful()) {
                                     // Sign in success, update UI with the signed-in user's information
                                     Toast.makeText(register.this, "User creation successful!.", Toast.LENGTH_SHORT).show();
+                                    Intent intent = new Intent(getApplicationContext(), login.class);
+                                    startActivity(intent);
+                                    finish();
 
                                 } else {
                                     // If sign in fails, display a message to the user.

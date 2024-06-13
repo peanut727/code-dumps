@@ -30,6 +30,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Amount:"
+                        android:textStyle="bold"
                         android:textSize="15sp"
                         android:textColor="@color/white"/>
 
@@ -40,7 +41,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="2"
                     android:layout_margin="10dp">
-                    
+
                     <EditText
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -49,7 +50,7 @@
                         android:textColor="@color/white"
                         android:background="@drawable/custom_input"/>
 
-                    
+
 
                 </RelativeLayout>
 
@@ -71,6 +72,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Type:"
+                        android:textStyle="bold"
                         android:textSize="15sp"
                         android:textColor="@color/white"/>
 
@@ -112,6 +114,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Description:"
+                        android:textStyle="bold"
                         android:textSize="15sp"
                         android:textColor="@color/white"/>
 
@@ -152,8 +155,8 @@
                     <Button
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="CANCEL"
-                        android:id="@+id/cancel_btn"
+                        android:text="DELETE"
+                        android:id="@+id/delete_btn"
                         android:background="@drawable/rounded_btn"
                         android:textAppearance="?android:textAppearanceMedium" />
 
@@ -170,8 +173,8 @@
                     <Button
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="SAVE"
-                        android:id="@+id/save_btn"
+                        android:text="UPDATE"
+                        android:id="@+id/update_btn"
                         android:background="@drawable/rounded_btn"
                         android:textAppearance="?android:textAppearanceMedium" />
 

@@ -44,6 +44,7 @@
                 android:maxLines="1"
                 android:text="Type"
                 android:textAppearance="?android:textAppearanceSmall"
+                android:textColor="@color/matte_black"
                 android:textStyle="bold"/>
 
             <TextView
@@ -51,6 +52,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/type_txt_income"
+                android:textColor="@color/matte_black"
                 android:text="Descrption"
                 android:textAppearance="?android:textAppearanceSmall"/>
 
@@ -66,11 +68,12 @@
                 android:id="@+id/amount_txt_income"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="10000"
+                android:gravity="center"
                 android:padding="10dp"
+                android:text="10000"
                 android:textAppearance="?android:textAppearanceSmall"
-                android:textStyle="bold"
-                android:textColor="@color/green"/>
+                android:textColor="@color/green"
+                android:textStyle="bold" />
 
 
         </RelativeLayout>

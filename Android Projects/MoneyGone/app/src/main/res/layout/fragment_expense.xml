@@ -13,7 +13,7 @@
         android:layout_width="match_parent"
         app:cardElevation="5dp"
         android:elevation="10dp"
-        android:backgroundTint="@color/light_green"
+        android:backgroundTint="@color/green"
         android:layout_height="wrap_content">
 
         <LinearLayout
@@ -55,7 +55,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textAppearance="?android:textAppearanceMedium"
-                    android:id="@+id/income_txt_result"
+                    android:id="@+id/expense_txt_result"
                     android:textColor="@color/white"
                     android:text="00000.00"
                     android:textSize="25sp"
