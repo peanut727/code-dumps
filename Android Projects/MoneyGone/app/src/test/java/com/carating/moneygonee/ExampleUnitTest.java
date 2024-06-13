@@ -1,4 +1,4 @@
-package com.carating.moneygone;
+package com.carating.moneygonee;
 
 import org.junit.Test;
 

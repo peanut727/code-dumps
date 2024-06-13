@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "490262989492",
+    "firebase_url": "https://money-gone-91af8-default-rtdb.firebaseio.com",
+    "project_id": "money-gone-91af8",
+    "storage_bucket": "money-gone-91af8.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:490262989492:android:c60413d082c6d76afe65e1",
+        "android_client_info": {
+          "package_name": "com.carating.moneygonee"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "490262989492-700bskjvme27ualvvshulj7qs80hrkcg.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.carating.moneygonee",
+            "certificate_hash": "6b75205b10527815937278aed9ae6dccfd113147"
+          }
+        },
+        {
+          "client_id": "490262989492-ubv5p53pcdp2rr2s73mjb7kbgbok41lt.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDN-TcXHd6sHCnYUv9shSPkfaCEdo3LS2M"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "490262989492-ubv5p53pcdp2rr2s73mjb7kbgbok41lt.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
